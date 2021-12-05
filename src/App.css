@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+  background-color: rgba(221, 221, 221, 0.9);
+  height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  /* border: 2px solid orangered; */
+}
+.input-container {
+  border: 2px solid whitesmoke;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 80vh;
+}
+.input {
+  width: 80%;
+  height: 100%;
+  font-size: 25px;
+  outline: none;
+}
+
+.btn {
+  width: 20%;
+  height: 100%;
+  font-size: 25px;
+  background-color: rgba(33, 29, 255, 0.966);
+}
+.btn:active {
+  background-color: rgba(3, 3, 216, 0.685);
+}
+.Radhi:first-child {
+  padding-top:20px;
+}
+.Radhi {
+  padding-bottom: 5px;
+  display: block;
+  font-size: 35px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+
+  color: red;
+}
+.Morta {
+  padding-bottom: 5px;
+  display: block;
+  font-size: 35px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  
+  color: blue;
+}
+.log-form {
+  position: absolute; 
+  top: 40%;
+  left:40%;
+  transform: translate(-50%, -50%);
+}
+.input-log {
+  margin-right: 40px;
+  height: 50px;
+  width: 180px;
+  
+}
+.btn-log{
+  font-size: 30px;
+  text-decoration: none;
+  background-color: rgb(255, 75, 75);
+  color: rgb(1, 1, 177);
+  border: 2px black solid;
+}
+
+.user {
+  color: black;
+}
+ul{
+  list-style: none;
+}
+.nav ul {
+  display:flex;
+  justify-content: center;
+}
+.nav ul li{
+  margin-right:50px;
+  font-size:40px;
+}
+.nav ul li a{
+  text-decoration: none;
+  color: blue;
+  transition: all .4s ;
+}
+
+.nav ul li a:active ,
+.nav ul li a:hover{
+
+  color: rgb(3, 3, 144);
+}
+
+.error{
+  color: red;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 300px ;
+  border: 1px black solid;
+  display: block;
+}
