@@ -11,7 +11,7 @@ const messages = (props) => {
                 Object.keys(props.msgs).map(el => (
                     <div className={props.msgs[el].user === props.activeAcc ? 'd-flex justify-content-start mb-4' : 'd-flex justify-content-end mb-4'}>
                         <div className={props.msgs[el].user === props.activeAcc ? 'msg_cotainer_send' : 'img_cont_msg'}>
-                            <img src={props.msgs[el].user === props.activeAcc ? 'https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256' : "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"} className="rounded-circle user_img_msg" />
+                            <img alt='' src={props.msgs[el].user === props.activeAcc ? 'https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256' : "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"} className="rounded-circle user_img_msg" />
                         </div>
                         <div className="msg_cotainer">
                             {props.msgs[el].text}
@@ -52,7 +52,7 @@ const messages = (props) => {
                                 <li className="active">
                                     <div className="d-flex bd-highlight">
                                         <div className="img_cont">
-                                            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" className="rounded-circle user_img" />
+                                            <img alt='' src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" className="rounded-circle user_img" />
                                             <span className="online_icon"></span>
                                         </div>
                                         <div className="user_info">
@@ -71,7 +71,7 @@ const messages = (props) => {
                             <div className="card-header msg_head">
                                 <div className="d-flex bd-highlight">
                                     <div className="img_cont">
-                                        <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" className="rounded-circle user_img" />
+                                        <img alt='' src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" className="rounded-circle user_img" />
                                         {navigator.onLine ? <span className="online_icon"></span> : <span className="offline_icon"></span>}
                                     </div>
                                     <div className="user_info">
