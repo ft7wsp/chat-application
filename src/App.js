@@ -15,7 +15,8 @@ class App extends Component {
     //   acc2:2222
     // },
     logedIn: false,
-    activeAcc: null
+    activeAcc: null,
+    numberMsgs: 0
   }
 
 
@@ -25,13 +26,15 @@ class App extends Component {
     }
     newMsg.text = e.target.value
     newMsg.user = this.state.activeAcc
+    newMsg.date = `${new Date().getDate()}--${new Date().getHours()}:${new Date().getMinutes()}`
     this.setState({ msg: newMsg })
   }
   submit = () => {
     axios.post('https://chat-app-73c79-default-rtdb.firebaseio.com/msg.json', this.state.msg).then(res => {
       axios.get('https://chat-app-73c79-default-rtdb.firebaseio.com/msg.json').then(res => {
         const data = res.data
-        console.log(data)
+        const newNumberMsgs = Object.keys(data).length
+        this.setState({ numberMsgs: newNumberMsgs })
         const msgs = Object.keys(data).slice(-7).map(msg => data[msg])
         this.setState({ msgs: msgs })
       }).catch(err => console.log(err))
@@ -41,14 +44,17 @@ class App extends Component {
   componentDidMount = () => {
     axios.get('https://chat-app-73c79-default-rtdb.firebaseio.com/msg.json').then(res => {
       const data = res.data
-      console.log(data)
+      const newNumberMsgs = Object.keys(data).length
+      this.setState({ numberMsgs: newNumberMsgs })
       const msgs = Object.keys(data).slice(-7).map(msg => data[msg])
       this.setState({ msgs: msgs })
+      console.log(data, newNumberMsgs, msgs);
+
     }).catch(err => console.log(err))
   }
 
   log = (e) => {
-    console.log(e);
+
     if (e.target.value === '1111') {
       // const history = useHistory();
       // history.push("/home");
@@ -56,9 +62,6 @@ class App extends Component {
     } else if (e.target.value === '2222') {
       this.setState({ activeAcc: 'Morta', logedIn: true })
     }
-  }
-  btnLog = () => {
-
   }
   render() {
 
@@ -72,7 +75,7 @@ class App extends Component {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Log log={this.log} active />} />
-          {this.state.logedIn ? <Route path='/msg' element={<Messages msgs={this.state.msgs} save={this.save} submit={this.submit} />} /> : <Route path='/msg' element={<Log log={this.log} />} />}
+          {this.state.logedIn ? <Route path='/msg' element={<Messages numberMsgs={this.state.numberMsgs} msgs={this.state.msgs} save={this.save} submit={this.submit} activeAcc={this.state.activeAcc} />} /> : <Route path='/msg' element={<Log log={this.log} />} />}
         </Routes>
         {/* <div className="App">
           {output}
