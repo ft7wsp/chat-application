@@ -1,6 +1,7 @@
 body,
 html {
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	background: #7F7FD5;
 	background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
@@ -195,7 +196,7 @@ html {
 .msg_time {
 	position: absolute;
 	left: 0;
-	bottom: -15px;
+	bottom: -25px;
 	color: rgba(255, 255, 255, 0.5);
 	font-size: 10px;
 }
