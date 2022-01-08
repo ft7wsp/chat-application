@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom'
 import './log-in.css'
 
 const LogIn = (props) => {
-    console.log(props.Username);
+
+    function handler(){
+        console.log(`it's it congratulation`)
+    }
     return (
         <>
             <div className='nav'>
@@ -25,7 +28,7 @@ const LogIn = (props) => {
                         <legend class="legend">Login</legend>
 
                         <div class="input">
-                            <input type="text" placeholder="choose your name" required onChange={props.Username} />
+                            <input type="text"  placeholder="choose your name" required onChange={props.Username} />
                             <span></span>
                         </div>
 
@@ -35,7 +38,7 @@ const LogIn = (props) => {
                         </div>
 
                         {/* <button type="submit" class="submit"><i class="fa fa-long-arrow-right"></i></button> */}
-                        <Link to='/msg' className='submit'> log in</Link>
+                        <Link to='/msg' className='submit' on={handler}> log in</Link>
                     </fieldset>
 
                     <div class="feedback">

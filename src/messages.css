@@ -288,3 +288,11 @@ html {
 		margin-bottom: 15px !important;
 	}
 }
+
+.amine{
+	font-size: 30px;
+	margin-left: 60px;
+	color: red;
+	background-color: black;
+	width: fit-content;
+}

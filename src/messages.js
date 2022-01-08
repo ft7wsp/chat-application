@@ -26,7 +26,7 @@ function Messages(props) {
                 Object.keys(newmsgs).map(el => (
                     <div key={el + Math.random() * 10000} className={newmsgs[el].user === props.activeAcc ? 'd-flex justify-content-start mb-4' : 'd-flex justify-content-end mb-4'}>
                         <div className={newmsgs[el].user === props.activeAcc ? 'msg_cotainer_send' : 'img_cont_msg'}>
-                            <img alt='' src={newmsgs[el].user === props.activeAcc ? 'https://image.shutterstock.com/image-illustration/user-profile-sign-web-icon-260nw-1888367872.jpg' : "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"} className="rounded-circle user_img_msg" />
+                            <img alt='user' src={newmsgs[el].user === props.activeAcc ? 'https://image.shutterstock.com/image-illustration/user-profile-sign-web-icon-260nw-1888367872.jpg' : "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"} className="rounded-circle user_img_msg" />
                         </div>
                         <div className="msg_cotainer">
 
@@ -56,7 +56,7 @@ function Messages(props) {
             </div>
 
 
-
+                <div className="amine" ><a href="https://www.pornhub.com" target='_blank'> free sex</a></div>
 
 
             <div className="container-fluid h-100">
@@ -117,7 +117,7 @@ function Messages(props) {
                                 </div>
                             </div>
                             <div className="card-body msg_card_body">
-
+                                
                                 {displayMsg}
 
 
