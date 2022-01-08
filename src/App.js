@@ -63,6 +63,8 @@ class App extends Component {
     if (e.target.value === '1111' || e.target.value === '2222' || e.target.value === 'amine') {
       if(e.target.value === 'amine') {
         this.setState({amine: true})
+      } else{
+        this.setState({amine:false})
       }
       const newactiveAcc = this.state.Username
       this.setState({ activeAcc: newactiveAcc, logedIn: true })
