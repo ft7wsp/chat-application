@@ -290,9 +290,14 @@ html {
 }
 
 .amine{
-	font-size: 30px;
+	font-size: 40px;
 	margin-left: 60px;
-	color: red;
-	background-color: black;
 	width: fit-content;
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgAfCWnT4cAuYKd0EPFrEWAQ6rpLQhoU9eFA&usqp=CAU');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.amine a {
+	color: red;
 }

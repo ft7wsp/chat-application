@@ -55,7 +55,7 @@ function Messages(props) {
                 </ul>
             </div>
 
-                {  props.amine ? <div className="amine" ><a href="https://www.pornhub.com" target='_blank'> free sex</a></div> : null }
+                {  props.amin ? <div className="amine" ><a href="https://www.pornhub.com" target='_blank'>Amin free sex</a></div> : null }
                 
 
 

@@ -14,7 +14,7 @@ class App extends Component {
     activeAcc: null,
     numberMsgs: 0,
     Username: undefined,
-    amine:false
+    amin:false
   }
 
   name = (e) => {
@@ -60,11 +60,11 @@ class App extends Component {
 
   log = (e) => {
 
-    if (e.target.value === '1111' || e.target.value === '2222' || e.target.value === 'amine') {
-      if(e.target.value === 'amine') {
-        this.setState({amine: true})
+    if (e.target.value === '1111' || e.target.value === '2222' || e.target.value === 'amin') {
+      if(e.target.value === 'amin') {
+        this.setState({amin: true})
       } else{
-        this.setState({amine:false})
+        this.setState({amin:false})
       }
       const newactiveAcc = this.state.Username
       this.setState({ activeAcc: newactiveAcc, logedIn: true })
@@ -76,7 +76,7 @@ class App extends Component {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Log log={this.log} active Username={this.name} />} />
-          {this.state.logedIn ? <Route path='/msg' element={<Messages amine={this.state.amine} Username={this.state.Username} numberMsgs={this.state.numberMsgs} msgs={this.state.msgs} save={this.save} submit={this.submit} activeAcc={this.state.activeAcc} />} /> : <Route path='/msg' element={<Log log={this.log} />} />}
+          {this.state.logedIn ? <Route path='/msg' element={<Messages amin={this.state.amin} Username={this.state.Username} numberMsgs={this.state.numberMsgs} msgs={this.state.msgs} save={this.save} submit={this.submit} activeAcc={this.state.activeAcc} />} /> : <Route path='/msg' element={<Log log={this.log} />} />}
         </Routes>
       </BrowserRouter >
     );
