@@ -55,8 +55,7 @@ function Messages(props) {
                 </ul>
             </div>
 
-                {  props.amin ? <div className="amine" ><a href="https://www.pornhub.com" target='_blank'>Amin free sex</a></div> : null }
-                
+              
 
 
             <div className="container-fluid h-100">
