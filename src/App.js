@@ -36,7 +36,7 @@ class App extends Component {
         const data = res.data
         const newNumberMsgs = Object.keys(data).length
         this.setState({ numberMsgs: newNumberMsgs })
-        const msgs = Object.keys(data).slice(-7).map(msg => data[msg])
+        const msgs = Object.keys(data).slice(-90).map(msg => data[msg])
         this.setState({ msgs: msgs })
       }).catch(err => console.log(err))
     })
@@ -49,7 +49,7 @@ class App extends Component {
       const data = res.data
       const newNumberMsgs = Object.keys(data).length
       this.setState({ numberMsgs: newNumberMsgs })
-      const msgs = Object.keys(data).slice(-7).map(msg => data[msg])
+      const msgs = Object.keys(data).slice(-90).map(msg => data[msg])
       this.setState({ msgs: msgs })
       // console.log(data, newNumberMsgs, msgs);
 

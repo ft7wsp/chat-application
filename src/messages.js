@@ -7,16 +7,29 @@ function Messages(props) {
     const [numberMsgs, setNumberMsgs] = useState(0)
     // const [msgs, setMsgs] = useState('hey')
     const [displayMsg, setDispalyMsg] = useState()
+useEffect(()=> {
 
+    setTimeout(() => {
+        const objDiv = document.getElementById('div');
+        objDiv.scrollTop = objDiv.scrollHeight;
+    }, 2000);
 
-
-
+},[])
+    
+    
     useEffect(() => {
+        
+
+        
+        
+            // I was not using an li but may work to keep your div scrolled to the bottom as li's are getting pushed to the div
+            
+          
         axios.get('https://chat-app-73c79-default-rtdb.firebaseio.com/msg.json').then(res => {
             const data = res.data
             const newNumberMsgs = Object.keys(data).length
             setNumberMsgs(newNumberMsgs)
-            const newmsgs = Object.keys(data).slice(-7).map(msg => data[msg])
+            const newmsgs = Object.keys(data).slice(-newNumberMsgs).map(msg => data[msg])
             // setMsgs(newmsgs)
             // for (let i = 0; i < 1000; i++) {
             //     console.log(i);
@@ -45,6 +58,7 @@ function Messages(props) {
 
     // console.log(props.numbernewmsgs);
 
+    
 
     return (
         <>
@@ -70,7 +84,7 @@ function Messages(props) {
                             </div>
                         </div>
                         <div className="card-body contacts_body">
-                            <ui className="contacts">
+                            <ul className="contacts">
                                 <li className="active">
                                     <div className="d-flex bd-highlight">
                                         <div className="img_cont">
@@ -84,7 +98,7 @@ function Messages(props) {
                                     </div>
                                 </li>
 
-                            </ui>
+                            </ul>
                         </div>
                         <div className="card-footer"></div>
                     </div></div>
@@ -115,7 +129,7 @@ function Messages(props) {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="card-body msg_card_body">
+                            <div className="card-body msg_card_body" id='div'>
                                 
                                 {displayMsg}
 

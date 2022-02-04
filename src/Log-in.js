@@ -21,27 +21,27 @@ const LogIn = (props) => {
                 //     <Link to='/msg' className='btn-log'> log in</Link>
                 // </div>
 
-                <form class="login">
+                <form className="login">
 
                     <fieldset>
 
-                        <legend class="legend">Login</legend>
+                        <legend className="legend">Login</legend>
 
-                        <div class="input">
+                        <div className="input">
                             <input type="text"  placeholder="choose your name" required onChange={props.Username} />
                             <span></span>
                         </div>
 
-                        <div class="input">
+                        <div className="input">
                             <input type="password" placeholder="Password" required onChange={props.log} />
                             <span></span>
                         </div>
 
-                        {/* <button type="submit" class="submit"><i class="fa fa-long-arrow-right"></i></button> */}
+                        {/* <button type="submit" className="submit"><i className="fa fa-long-arrow-right"></i></button> */}
                         <Link to='/msg' className='submit' on={handler}> log in</Link>
                     </fieldset>
 
-                    <div class="feedback">
+                    <div className="feedback">
                         login successful <br />
                         redirecting...
                     </div>
